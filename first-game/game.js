@@ -1,24 +1,21 @@
-// Create our only scene called mainScene, in the game.js file
 class mainScene {
   // The three methods currently empty
 
   preload() {
-    // Parameters: name of the sprite, path of the image
+    // This method is called once at the beginning. It will load all the assets, like sprites and sounds 
 this.load.image('player', 'assets/dino.jpg');
 this.load.image('coin', 'assets/coin.jpeg');
-    // This method is called once at the beginning
-    // It will load all the assets, like sprites and sounds  
   }
+
   create() {
-    // Parameters: x position, y position, name of the sprite
+    
 this.player = this.physics.add.sprite(100, 100, 'player');
 this.coin = this.physics.add.sprite(300, 300, 'coin');
 
 // Store the score in a variable, initialized at 0
 this.score = 0;
 
-// The style of the text 
-// A lot of options are available, these are the most important ones
+// The style of the text A lot of options are available, these are the most important ones
 let style = { font: '20px Arial', fill: '#fff' };
 
 // Display the score in the top left corner
